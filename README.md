@@ -18,28 +18,27 @@ Imperial College London
 
 ## Overview
 
-![teaser](https://github.com/lattas/FitMe/assets/9087275/0313eb17-a63e-413b-83f0-85766e5ee8ad)
+![teaser](https://github.com/lattas/FitMe/assets/9087275/80a39fdd-3bdd-47ec-ab87-0f8990cd0553)
 
 In this paper, we introduce FitMe, a facial reflectance model and a differentiable rendering optimization pipeline, that can be used to acquire high-fidelity renderable human avatars from single or multiple images.
 
 The model consists of a multi-modal style-based generator, that captures facial appearance in terms of diffuse and specular reflectance, and a PCA-based shape model. We employ a fast differentiable rendering process that can be used in an optimization pipeline, while also achieving photorealistic facial shading. Our optimization process accurately captures both the facial reflectance and shape in high-detail, by exploiting the expressivity of the style-based latent representation and of our shape model.
 
-FitMe achieves state-of-the-art reflectance acquisition and identity preservation on single ``in-the-wild'' facial images, while it produces impressive scan-like results, when given multiple unconstrained facial images pertaining to the same identity. In contrast with recent implicit avatar reconstructions, FitMe requires only one minute and produces relightable mesh and texture-based avatars, that can be used by end-user applications.
+FitMe achieves state-of-the-art reflectance acquisition and identity preservation on single "in-the-wild" facial images, while it produces impressive scan-like results, when given multiple unconstrained facial images pertaining to the same identity. In contrast with recent implicit avatar reconstructions, FitMe requires only one minute and produces relightable mesh and texture-based avatars, that can be used by end-user applications.
 
 ## Method
 In two steps, we optimize the latent vector of the generator, the shape and rendering parameters, by combining 3DMM fitting, GAN inversion and GAN tuning. The optimization is guided by accurate diffuse and specular differentiable rendering.
 
-![method](https://github.com/lattas/FitMe/assets/9087275/22381c13-8b03-47e7-97d7-c593ba9ba239)
-
+![method](https://github.com/lattas/FitMe/assets/9087275/b62f27fb-8417-4ac4-8ee0-a3b133e2a806)
 
 ## Results
 FitMe can be optimized for arbitrary facial images, from a single internet sourced picture, to multiple selfie photographs.
 
-![single](https://github.com/lattas/FitMe/assets/9087275/ec303a58-bf6b-4a7c-b5ca-8f70f5e86f43)
+![single](https://github.com/lattas/FitMe/assets/9087275/3bae220a-4288-4139-9c96-27b7a3f827f1)
 
 Even with three unconstrained quick selfies of a subject, in an arbitrary environment and illumination, FitMe produces high-fidelity relfectance and shape that can be photorealistically relighted.
 
-https://github.com/lattas/FitMe/assets/9087275/f805452d-1753-45f0-aa77-c5c7306f23ad
+https://github.com/lattas/FitMe/assets/9087275/64f04bbe-a7a2-4c86-a90e-5dc28e3e9bb8
 
 ## CVPR Video on Youtube
 <div align="center">
