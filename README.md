@@ -2,7 +2,9 @@
 [![Youtube Video](https://img.shields.io/badge/Video-CVPR-lightgrey?logo=youtube)](https://youtu.be/73ZFDkZRRCk)
 [![arXiv Preprint](https://img.shields.io/badge/arXiv-Paper-lightgrey?logo=arxiv)](https://arxiv.org/abs/2305.09641)
 
-Published in the IEEE/CVF Conference on Computer Vision and Pattern Recognition (__[CVPR 2023](https://openaccess.thecvf.com/content/CVPR2023/papers/Lattas_FitMe_Deep_Photorealistic_3D_Morphable_Model_Avatars_CVPR_2023_paper.pdf)__)
+Published in the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2023) (__[CVPR Paper Link](https://openaccess.thecvf.com/content/CVPR2023/papers/Lattas_FitMe_Deep_Photorealistic_3D_Morphable_Model_Avatars_CVPR_2023_paper.pdf)__)
+
+See the __[Project Page](https://alexlattas.com/fitme)__ for more details and HQ videos.
 
 [Alexandros Lattas](https://alexlattas.com),
 [Stylianos Moschoglou](https://www.doc.ic.ac.uk/~sm3515/),
@@ -16,15 +18,32 @@ Imperial College London
 
 ## Overview
 
+![teaser](https://github.com/lattas/FitMe/assets/9087275/0313eb17-a63e-413b-83f0-85766e5ee8ad)
+
 In this paper, we introduce FitMe, a facial reflectance model and a differentiable rendering optimization pipeline, that can be used to acquire high-fidelity renderable human avatars from single or multiple images.
 
 The model consists of a multi-modal style-based generator, that captures facial appearance in terms of diffuse and specular reflectance, and a PCA-based shape model. We employ a fast differentiable rendering process that can be used in an optimization pipeline, while also achieving photorealistic facial shading. Our optimization process accurately captures both the facial reflectance and shape in high-detail, by exploiting the expressivity of the style-based latent representation and of our shape model.
 
 FitMe achieves state-of-the-art reflectance acquisition and identity preservation on single ``in-the-wild'' facial images, while it produces impressive scan-like results, when given multiple unconstrained facial images pertaining to the same identity. In contrast with recent implicit avatar reconstructions, FitMe requires only one minute and produces relightable mesh and texture-based avatars, that can be used by end-user applications.
 
+## Method
+In two steps, we optimize the latent vector of the generator, the shape and rendering parameters, by combining 3DMM fitting, GAN inversion and GAN tuning. The optimization is guided by accurate diffuse and specular differentiable rendering.
+
+![method](https://github.com/lattas/FitMe/assets/9087275/22381c13-8b03-47e7-97d7-c593ba9ba239)
+
+
+## Results
+FitMe can be optimized for arbitrary facial images, from a single internet sourced picture, to multiple selfie photographs.
+
+![single](https://github.com/lattas/FitMe/assets/9087275/ec303a58-bf6b-4a7c-b5ca-8f70f5e86f43)
+
+Even with three unconstrained quick selfies of a subject, in an arbitrary environment and illumination, FitMe produces high-fidelity relfectance and shape that can be photorealistically relighted.
+
+https://github.com/lattas/FitMe/assets/9087275/f805452d-1753-45f0-aa77-c5c7306f23ad
+
 ## CVPR Video on Youtube
 <div align="center">
-      <a href="hhttps://youtu.be/73ZFDkZRRCk">
+      <a href="https://youtu.be/73ZFDkZRRCk">
          <img src="https://img.youtube.com/vi/73ZFDkZRRCk/0.jpg" width="480">
       </a>
 </div>
