@@ -47,6 +47,11 @@ https://github.com/lattas/FitMe/assets/9087275/64f04bbe-a7a2-4c86-a90e-5dc28e3e9
       </a>
 </div>
 
+## Code
+This model is not currently publicly available,
+but we have released the rendering code used in AvatarMe++ and FitMe as a Pytorch3D extension [Pytorch3D-Me](https://github.com/lattas/pytorch3d-me).
+It includes the Blinn-Phong shader, subsurface scattering, and occlusion approximations.
+
 ## Reference
 ```
 @InProceedings{Lattas_2023_CVPR,
